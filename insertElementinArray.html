@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Element in Array</title>
+</head>
+<body>
+   <input type="text" placeholder="enter new element" id="newEle">
+   <input type="text" placeholder="enter possition" id="possition">
+   <button onclick="insertEle()">Insert Element</button>
+   <br>
+</body>
+<script>
+    let data = [1,2,3,4,5,6,7,8,9]
+    if(possition>data.length){
+            alert("Input valid value")
+        }
+    function insertEle(){
+        let newEl = document.getElementById('newEle').value;
+        let possition = document.getElementById('possition').value;
+        
+        for(let i = data.length-1; i>=0; i--){         
+            if(i>=possition){
+                data[i + 1] = data[i]
+                    if(i == possition){
+                        data[i] = newEl;
+            }
+        }
+        document.write(`index of array is ${[i]} and value is ${data[i]} <br>`)
+    }
+    console.warn(data);
+}
+// using javascript builtin method splice
+data.splice(2,0,100) //2 is position and 0 is no elements delete and 100 is new value to be insert in array
+console.warn(data);
+       
+</script>
+</html>
