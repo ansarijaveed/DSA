@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Day-1 Array Traversing</title>
+</head>
+<body>
+    <h1>Array Traversing</h1>
+<input type="text" placeholder="enter input" id="inpbox">
+<button onclick="getValue()">GetValue</button>
+<br>
+</body>
+<script>
+    
+let data = [1,2,3,4,5,6,7,8,9,10]
+function getValue(){
+    let ele = document.getElementById('inpbox').value
+    if(ele<data.length && typeof parseInt(ele)=== "number")
+    {
+    alert(data[ele])
+    }else{
+    alert("input valid value")
+    }
+}
+
+for(let i = 0; i<data.length; i++){
+document.write(`Index of array is ${[i]}and Value is ${data[i]} <br>`)
+}
+
+
+
+
+</script>
+</html>
