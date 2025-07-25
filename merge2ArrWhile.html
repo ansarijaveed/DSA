@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge Two array with While Loop</title>
+</head>
+<body>
+    <h3>Merge Two array with While Loop</h3>
+    <h4>Its work with sorted array only</h4>
+    <h4>If we are using unsorted array then first sort the arry using sort((n,m) => n - m) method</h4>
+</body>
+<script>
+    let data1=[90,3,7,12,34,56,90];
+    let data2=[45,9,25,45];
+    let data3=[];
+    
+    data1.sort((n,m) => n-m);
+    data2.sort((n,m) => n-m);
+    
+    let i=0;
+    let j=0;
+    
+    while(i<data1.length && j<data2.length){
+        if(data1[i]<data2[j])
+        {
+            data3.push(data1[i]);
+            i++;
+            console.warn(data3[i]);
+        }else{
+            data3.push(data2[j]);
+            j++;
+            console.warn(data3[j]);
+        }
+        
+    }console.warn(data3);
+    while(i<data1.length){
+            data3.push(data1[i]);
+            i++;
+    }
+    while(j<data2.length){
+            data3.push(data2[j])
+            j++;
+    }console.log(data3);
+    
+    
+</script>
+</html>
