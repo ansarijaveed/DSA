@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merg Two Array</title>
+</head>
+<body>
+    <h1>Merge Two Array</h1>
+</body>
+<script>
+    let data = [9,5,8,3,2,1];
+    let data1 = [50,10,30,40];
+    let data3 = []
+    
+    for(i=0; i<data.length; i++){
+        data3[i] = data[i]       
+    }
+    for(i=0; i<data1.length; i++){
+        data3[data.length+i] = data1[i]
+
+    }
+    console.warn(data3);
+    // javascript inbuild function for merge two arrays
+    let arr = [100,200,500,800]
+    let arr1 = [2000,5000,1000,6000]
+    let arr3 = [...arr,...arr1]
+    console.warn(arr);
+    console.warn(arr1);
+    console.warn(arr3);
+    
+    
+            
+</script>
+</html>
